@@ -98,7 +98,7 @@ $$
 min_f E_{x, x^+, \{x_i^-\}_{i=1}^N}\left[-\log \frac{e^{f(x)^T f(x^+)}}{e^{f(x)^T f(x^+)} + \sum_{i=1}^N e^{f(x)^T f(x^-_i)}}\right]
 $$
 
-In this formulation, $x$ is the anchor sample (from the original dataset), $x^+$ is a positive sample (close to $x$), and $x^-$ is a negative sample (far from $x$). We observe that similarity is large when $e^{f(x)^T f(x^+)$ is large and small when $\sum_{i=1}^N e^{f(x)^T f(x^-_i)}}$ is small. It has been shown that this loss formulation can outperform supervised pretraining (He et al 2020 - https://arxiv.org/pdf/1911.05722.pdf, Misra & van der Maaten 2020 - https://arxiv.org/pdf/1912.01991.pdf).
+In this formulation, $x$ is the anchor sample (from the original dataset), $x^+$ is a positive sample (close to $x$), and $x^-$ is a negative sample (far from $x$). We observe that similarity is large when $e^{f(x)^T f(x^+)}$ is large and small when $\sum_{i=1}^N e^{f(x)^T f(x^-_i)}$ is small. It has been shown that this loss formulation can outperform supervised pretraining (He et al 2020 - https://arxiv.org/pdf/1911.05722.pdf, Misra & van der Maaten 2020 - https://arxiv.org/pdf/1912.01991.pdf).
 
 With this formulation, you will need to generate positive and negative examples from your anchor point. Positive examples are easily generated via a random combination of data augmentations (since a slightly perturbed version of $x$ ought to be similar to $x$). Negative examples are uniformly sampled at random from the dataset. This leads to a few problems. First, you may have false negatives if you randomly sample a data point that is actually very similar to $x$. Second, you may select "easy" negatives, points that are clearly distinct from $x$ and will not provide any new information to the model.
 
