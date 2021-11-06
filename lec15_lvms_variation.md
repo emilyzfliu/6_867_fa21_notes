@@ -1,4 +1,7 @@
 # Latent Variable Models, Variational Learning
+Presented by Dr. Tommi Jaakkola, MIT, Nov 2 2021
+
+Notes by Emily Liu
 
 ## Recall: Bayesian Networks
 Bayesian networks use directed acyclic graphs to describe how the probability distribution factors into smaller components. A directed edge from node $u$ to $x$ signals that the distribution of $x$ is conditional on $u$ (so the corresponding probability distributions correspond to $P(u)$ and $P(x | u)$ respectively).

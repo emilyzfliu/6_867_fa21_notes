@@ -31,7 +31,7 @@ This is hard! So hard, in fact, that the method of solving this exact maximizati
 We can relax the EM algorithm (for any mixture model) by thinking of $Q$ as a distribution. We first consider just one sample $x$.
 
 $$
-\max \log P(x) = \log{\sum_{z=1}^k P(z) P(x | z)\\
+\max \log P(x) = \log\sum_{z=1}^k P(z) P(x | z)\\
 = \log{\sum_{z=1}^k Q(z | x) \frac{P(z) P(x | z)}{Q(z | x)}} \geq \sum_{z=1}^k Q(z | x) \log \frac{P(z) P(x | z)}{Q(z | x)}\\
 = \sum_{z=1}^k Q(z | x) \log(P(z) P(x | z)) + \sum_{z=1}^k Q(z|x) \log \frac{1}{Q(z|x)}
 $$
