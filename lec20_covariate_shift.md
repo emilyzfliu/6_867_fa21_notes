@@ -1,5 +1,5 @@
 # Domain Adaptation, Covariate Shift
-Presented by Dr. Tommi Jaakkola, MIT, Nov 16 2021
+Presented by Dr. Tommi Jaakkola, MIT, Nov 18 2021
 
 Notes by Emily Liu
 
